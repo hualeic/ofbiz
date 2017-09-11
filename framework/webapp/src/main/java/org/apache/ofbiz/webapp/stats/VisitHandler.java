@@ -144,7 +144,8 @@ public class VisitHandler {
 							String initialLocale = initialLocaleObj != null ? initialLocaleObj.toString() : "";
 
 							if (UtilValidate.isEmpty(webappName)) {
-								Debug.logInfo(new Exception(),
+								Debug.logInfo(
+										new Exception(),
 										"The webappName was empty, somehow the initial request settings were missing.",
 										module);
 							}
@@ -284,8 +285,8 @@ public class VisitHandler {
 													+ visitor.getString("visitorId") + "]", module);
 									}
 								} catch (GenericEntityException e) {
-									Debug.logError(e, "Error finding visitor with ID from cookie: " + cookieVisitorId,
-											module);
+									Debug.logError(e,
+											"Error finding visitor with ID from cookie: " + cookieVisitorId, module);
 									visitor = null;
 								}
 							}
